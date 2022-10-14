@@ -1,0 +1,35 @@
+@page
+@model Agenda.Pages.Categorias.Detalhes
+@{
+    ViewData["Title"] = "Detalhe dacategoria";
+}
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-8 offset-2">
+            <h2 class="text-info mb-2">
+                Detalhes da categoria: @Model.Categoria.Id
+            </h2>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <strong>Id: </strong>@Model.Categoria.Id
+                </li>
+                <li class="list-group-item">
+                    <strong>Nome: </strong>@Model.Categoria.Nome
+                </li>
+                <li class="list-group-item">
+                    <strong>Data do Cadastro: </strong>@Model.Categoria.DataCadastro
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+
+            <a asp-page="Index" class="btn btn-secondary">Voltar</a>
+
+        </div>
+    </div>
+</div>

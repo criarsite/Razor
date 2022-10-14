@@ -1,0 +1,63 @@
+@page
+@using Models
+@model Agenda.Pages.Categorias.Index
+@{
+    ViewData["Title"] = "Lista de categorias";
+}
+
+
+<div class="container">
+
+    <div class="row">
+        <div class=" col-9">
+            <h1 class"text-info">@ViewData["Title"]</h1>
+
+        </div>
+
+        <div class=" col-3">
+            <a class="btn btn-secondary" asp-page="/Categorias/Criar">Criar nova categoria</a>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    @if(Model.Categorias.Count() > 0)
+    {
+         <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(e => e.Categorias.FirstOrDefault().Id)</th>
+                    <th>@Html.DisplayNameFor(e => e.Categorias.FirstOrDefault().Nome)</th>
+                    <th>@Html.DisplayNameFor(e => e.Categorias.FirstOrDefault().DataCadastro)</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var categoria in Model.Categorias) {
+                    <tr class="table-light">
+                        <td>@Html.DisplayFor(e => categoria.Id)</td>
+                        <td>@Html.DisplayFor(e => categoria.Nome)</td>
+                        <td>@Html.DisplayFor(e => categoria.DataCadastro)</td>
+                        <td>
+                            <a class="col-3 btn btn-success" asp-page="../Categorias/Detalhes" asp-route-id="@categoria.Id">
+                                Detalhes
+                            </a>
+                            <a class="col-3 offset-1 btn btn-warning" asp-page="../Categorias/Editar" asp-route-id="@categoria.Id">
+                                Editar
+                            </a>
+                            <a class="col-3 offset-1 btn btn-danger" asp-page="../Categorias/Excluir" asp-route-id="@categoria.Id">
+                               Deletar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    } else {
+        <h3 class="text-warning text-center">Lista de Categorias esta vazia</h3>
+    }
+
+
+</div>

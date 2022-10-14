@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Exluir categoria";
+}
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-8 offset-2">
+            <h2 class="text-info mb-2">
+                Detalhes da categoria: @Model.Categoria.Id
+            </h2>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <strong>Id: </strong>@Model.Categoria.Id
+                </li>
+                <li class="list-group-item">
+                    <strong>Nome: </strong>@Model.Categoria.Name
+                </li>
+                <li class="list-group-item">
+                    <strong>Data do Cadastro: </strong>@Model.Categoria.DataCadastro
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form method="post" class="form"> 
+           
+            <input type="hidden" asp-for="Categoria.Id"/>
+
+                <button type="submit" class="col-4 offset-2 btn btn-danger">Excluir</button>
+                <a asp-page="Index" class="col-4 btn btn-secondary">Cancelar</a>
+                 
+ 
+            </form>
+        </div>
+    </div>
+</div>
+ 
