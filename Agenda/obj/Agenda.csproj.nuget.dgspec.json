@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\Razor\\Agenda\\Agenda.csproj": {}
+    "C:\\Dev\\Razor\\Razor\\Agenda\\Agenda.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\Razor\\Agenda\\Agenda.csproj": {
+    "C:\\Dev\\Razor\\Razor\\Agenda\\Agenda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Razor\\Agenda\\Agenda.csproj",
+        "projectUniqueName": "C:\\Dev\\Razor\\Razor\\Agenda\\Agenda.csproj",
         "projectName": "Agenda",
-        "projectPath": "C:\\Dev\\Razor\\Agenda\\Agenda.csproj",
+        "projectPath": "C:\\Dev\\Razor\\Razor\\Agenda\\Agenda.csproj",
         "packagesPath": "C:\\Users\\oktug\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\Razor\\Agenda\\obj\\",
+        "outputPath": "C:\\Dev\\Razor\\Razor\\Agenda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oktug\\AppData\\Roaming\\NuGet\\NuGet.Config"

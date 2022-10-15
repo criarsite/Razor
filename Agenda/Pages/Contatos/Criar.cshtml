@@ -1,0 +1,64 @@
+@page
+@model Agenda.Pages.Contatos.Criar
+@{
+    ViewData["Title"] = "Criar";
+}
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-8 offset-2">
+            <h2 class="text-info">
+                Criar um novo contato
+            </h2>
+
+            <form method="post" class="form">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="ViewModel.Contato.Nome" class="form-label"></label>
+                    <input asp-for="ViewModel.Contato.Nome" class="form-control" placeholder="Escreva um nomme..."/>
+                    <span asp-validation-for="ViewModel.Contato.Nome" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="ViewModel.Contato.Email" class="form-label"></label>
+                    <input asp-for="ViewModel.Contato.Email" class="form-control" placeholder="Escreva um Email..."/>
+                    <span asp-validation-for="ViewModel.Contato.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="ViewModel.Contato.Telefone" class="form-label"></label>
+                    <input asp-for="ViewModel.Contato.Telefone" class="form-control" placeholder="Escreva um Numero de Telefone..."/>
+                    <span asp-validation-for="ViewModel.Contato.Telefone" class="text-danger"></span>
+                </div>
+
+              <!--  <div class="form-group mb-3">
+                    <label asp-for="ViewModel.Contato.Categoria" class="form-label"></label>
+                    
+                  <select asp-for="ViewModel.Contato.CategoriaId" 
+                    asp-items="@(new SelectList(Model.ViewModel.ListarCategoria))"
+                    class="form-control"></select>
+                    <span asp-validation-for="ViewModel.Contato.Categoria" class="text-danger"></span>
+                </div> --> 
+
+                <div class="form-group mb-3">
+                    <label asp-for="ViewModel.Contato.DataCadastro" class="form-label"></label>
+                    <input asp-for="ViewModel.Contato.DataCadastro" class="form-control"/>
+                    <span asp-validation-for="ViewModel.Contato.DataCadastro" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="text-center btn btn-primary col-12">Criar contato</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <a asp-page="Index" class="btn btn-secondary">Voltar</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

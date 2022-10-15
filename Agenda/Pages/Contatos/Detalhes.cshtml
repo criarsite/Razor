@@ -1,0 +1,42 @@
+@page
+@model Agenda.Pages.Contatos.Detalhes
+@{
+    ViewData["Title"] = "Detalhes do contato";
+}
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-8 offset-2">
+            <h2 class="text-info mb-2">
+                Detalhes: @Model.Contato.Id
+            </h2>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <strong>Id: </strong>@Model.Contato.Id
+                </li>
+                <li class="list-group-item">
+                    <strong>Nome: </strong>@Model.Contato.Nome
+                </li>
+                <li class="list-group-item">
+                    <strong>Email: </strong>@Model.Contato.Email
+                </li>
+                <li class="list-group-item">
+                    <strong>Telefone </strong>@Model.Contato.Telefone
+                </li>
+                <li class="list-group-item">
+                    <strong>Categoria: </strong>@Model.Contato.Categoria.Nome
+                </li>
+                <li class="list-group-item">
+                    <strong>Data do Cadastro: </strong>@Model.Contato.DataCadastro
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <a asp-page="Index" class="btn btn-secondary">Voltar</a>
+        </div>
+    </div>
+</div>

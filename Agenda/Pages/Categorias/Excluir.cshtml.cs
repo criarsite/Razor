@@ -16,7 +16,7 @@ namespace Agenda.Pages
             _context = context;
         }
 
-        [BindProperty]
+    [BindProperty]
         public Categoria Categoria { get; set; }
 
         public async Task OnGet(int id)
@@ -24,23 +24,25 @@ namespace Agenda.Pages
             Categoria = await _context.Categoria.FindAsync(id);
         }
 
+  
+
         public async Task<IActionResult> OnPostDelete(int id)
         {
 
-             
-                //  var categoriabd = await _context.Categoria.Where(e => e.Id == Categoria.Id).FirstAsync();
-                // var categoriabd = _context.Categoria.Find(id);
-                var categoriabd = await _context.Categoria.FirstAsync(id);
 
-                if (categoriabd is null)
-                {
-                    return NotFound();
-                }
-                _context.Categoria.Remove(categoriabd);
-                await _context.SaveChangesAsync();
+            var categoriabd = await _context.Categoria.Where(e => e.Id == Categoria.Id).FirstAsync();
+            // var categoriabd = _context.Categoria.Find(id);
+            // var categoriabd = await _context.Categoria.FirstAsync(id);
 
-                return RedirectToPage("Index");
+            if (categoriabd is null)
+            {
+                return NotFound();
             }
-           
+            _context.Categoria.Remove(categoriabd);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage("Index");
+        }
+
     }
 }

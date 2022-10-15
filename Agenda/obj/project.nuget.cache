@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Axy/U/fm+MOoRHJNie7iBBzkUtFvYw1NVYlO0YZGMHTcmAgHuBWh/bpiKTBZ1XrBqJvzx+VToeru6ey31OY+JQ==",
+  "dgSpecHash": "c5O90q0QPvEa9hvx9ANQzLHbPatrjQrpmeHR2gmA2B2C70ohvvbS7i0SWaM/0sRbANl/F+zLnKGYs5DnDXaEwQ==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\Razor\\Agenda\\Agenda.csproj",
+  "projectFilePath": "C:\\Dev\\Razor\\Razor\\Agenda\\Agenda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oktug\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\oktug\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
